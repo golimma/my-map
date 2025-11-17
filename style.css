@@ -1,6 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 20px;
+  font-family: Arial, sans-serif;
 }
 
 #map {
@@ -12,5 +12,4 @@ body {
 textarea {
   width: 60%;
   padding: 10px;
-  font-size: 14px;
 }
