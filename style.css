@@ -1,15 +1,30 @@
+/* 전체 기본 스타일 */
 body {
-  margin: 20px;
   font-family: Arial, sans-serif;
+  margin: 20px;
 }
 
+/* 주소 입력 textarea */
+#addrInput {
+  width: 100%;
+  max-width: 600px;
+  font-size: 14px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* 실행 버튼 */
+button {
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 지도 영역 */
 #map {
   width: 100%;
-  height: 80vh;
+  height: 600px; /* 지도 높이 매우 중요! */
   margin-top: 20px;
-}
-
-textarea {
-  width: 60%;
-  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
