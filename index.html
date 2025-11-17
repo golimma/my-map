@@ -3,24 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <title>배차 지도 시스템</title>
+
+  <!-- 네이버 지도 API -->
   <script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID"></script>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h2>배차 지도</h2>
 
-  <!-- 주소 입력 -->
-  <textarea id="addrInput" placeholder="주소 1개씩 입력" rows="10"></textarea>
-  <br>
+  <textarea id="addrInput" placeholder="주소를 줄바꿈으로 입력" rows="10"></textarea>
   <button onclick="processAddresses()">좌표 변환 및 마커 표시</button>
 
-  <!-- CSV 업로드 -->
-  <input type="file" id="csvFile" accept=".csv" onchange="handleCSV(event)" />
-
-  <!-- 지도 영역 -->
   <div id="map"></div>
 
+  <!-- 🚀 모든 기능 코드는 이 파일에 -->
   <script src="script.js"></script>
 </body>
 </html>
-
