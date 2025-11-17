@@ -1,1 +1,19 @@
 
+async function geocodeAddress(address) {
+  const url = `https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query=${encodeURIComponent(address)}`;
+  
+  const res = await fetch(url, {
+    headers: {
+      "X-NCP-APIGW-API-KEY-ID": "YOUR_CLIENT_ID",
+      "X-NCP-APIGW-API-KEY": "YOUR_CLIENT_SECRET"
+    }
+  });
+
+  const data = await res.json();
+  if (data.addresses.length === 0) return null;
+
+  return {
+    lat: parseFloat(data.addresses[0].y),
+    lng: parseFloat(data.addresses[0].x)
+  };
+}
